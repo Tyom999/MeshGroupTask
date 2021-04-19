@@ -1,0 +1,27 @@
+<div class="container" (click)="disableContextMenu()">
+  <h1>Messages</h1>
+  <div class="messages">
+    <div
+      class="message"
+      *ngFor="let msg of messages$ | async"
+      (contextmenu)="onRightClick($event, msg)"
+    >
+      <p [ngClass]="{myMessage: msg.fromId === userId}">{{msg.message}} <b>-Likes: </b>{{msg.like ?msg.like.length: 0}}</p>
+      <p [ngClass]="{myMessage: msg.fromId === userId}" class="likeMessage" (click)="likeMsg(msg)" *ngIf="msg.like.length === 0  || (!(msg.like).includes(userId));else noLiked"><i>Like</i></p>
+      <ng-template #noLiked>
+        <p [ngClass]="{myMessage: msg.fromId === userId}" class="likeMessage" (click)="dislikeMsg(msg)" ><i>Dislike</i></p>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="container-textarea">
+    <textarea class="msg"  (keyup.enter)="sendMessage()" placeholder="Send a message..." [(ngModel)]="message"  cols="30" rows="10"></textarea>
+    <button (click)="sendMessage()"  [class.G-disabled]="!message" >Send</button>
+  </div>
+</div>
+
+<div *ngIf="contextmenu">
+  <div class="contextmenu" [ngStyle]="{'left.px': contextmenuX, 'top.px': contextmenuY}" (click)="editMsg()">
+    Edit message
+  </div>
+</div>

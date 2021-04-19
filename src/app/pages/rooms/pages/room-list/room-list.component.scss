@@ -1,0 +1,42 @@
+.container {
+  width: 100vh;
+  height: 100%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 50%;
+}
+.card-header {
+  width: 600px;
+  height: 25%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.room {
+  width: 600px;
+  height: 100px;
+  border-radius: 8px;
+  padding: 3px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.secondColumn {
+  margin-top: 25px;
+  }
+.btn {
+  background-color: dodgerblue;
+  border-radius: 8px;
+  width: 80px;
+  height: 35px;
+  border: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+

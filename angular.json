@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "meshGroup"
+    }
+  },
+  "defaultProject": "meshGroup",
+  "cli": {
+    "analytics": "798643ad-734e-4c6e-ba1f-965e29e8e37d"
+  }
 }

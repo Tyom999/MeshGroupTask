@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="column">
+        <h1>Login to your account</h1>
+        <input type="text" placeholder="Login" formControlName="login">
+        <input type="password" placeholder="Password" formControlName="password">
+          <p class="createAcc" [routerLink]="['/auth/register']">you don't have an account ?</p>
+        <div class="btn-card">
+          <button type="submit" [class.btn_disabled]="form.invalid" [disabled]="form.invalid" class="btn">Login</button>
+        </div>
+        </div>
+      </form>
+  </div>
+</div>

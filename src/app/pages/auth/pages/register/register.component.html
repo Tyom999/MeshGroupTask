@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card">
+    <div class="column">
+      <h1>Registration</h1>
+      <input type="text"  [(ngModel)]="login" placeholder="Login" >
+      <input type="password" [(ngModel)]="password" placeholder="Password">
+      <input type="password" [(ngModel)]="confirmPassword" placeholder="Confirm Password">
+      <p class="createAcc" [routerLink]="['/auth/login']">you already have an account ?</p>
+      <div class="btn-card">
+        <button type="button" class="btn" (click)="submit()">Register</button>
+      </div>
+    </div>
+  </div>
+</div>

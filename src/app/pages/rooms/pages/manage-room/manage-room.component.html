@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="card">
+    <h1>Create new room</h1>
+    <input type="text" placeholder="Please input name" [(ngModel)]="name">
+    <button class="btn" [disabled]="!name" (click)="submitForm()">{{ManageTypesEnum.Add ? "Create Room": "Update Room"}}</button>
+  </div>
+</div>

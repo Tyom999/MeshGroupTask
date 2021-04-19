@@ -1,0 +1,31 @@
+.container {
+  width: 100vh;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  height: 30px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.btn {
+  background-color: dodgerblue;
+  border-radius: 8px;
+  width: 80px;
+  height: 35px;
+  border: none;
+  outline: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+}

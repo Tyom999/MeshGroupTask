@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <button class="btn" [routerLink]="['', 'rooms', ManageTypes.Add]">Create Room</button>
+      <button class="btn" (click)="logout()">Logout</button>
+    </div>
+    <div class="room" *ngFor="let item of list$ | async">
+      <div class="firstColumn">
+        <b>Name - </b> {{item.name}}
+
+      </div>
+      <div class="secondColumn">
+        <button class="btn" [routerLink]="['', 'rooms', 'chat', item._id]">Join to Chat</button>
+      </div>
+    </div>
+  </div>
+</div>
